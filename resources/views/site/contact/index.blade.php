@@ -20,20 +20,20 @@
                 </div>
                 <label for="name">Nome completo</label>
                 <input id="name" name="name" type="text" tabindex="1" placeholder="Ex: José da Silva"
-                       autofocus value="{{old('name')}}">
+                       autofocus value="{{old('name')}}" required>
                 @error('name')
                 <div>{{ $message }}</div>
                 @enderror
 
                 <label for="email">Email</label>
-                <input id="email" name="email" type="text" tabindex="2" placeholder="Ex: email@email.com.br"
-                       value="{{old('email')}}">
+                <input id="email" name="email" type="email" tabindex="2" placeholder="Ex: email@email.com.br"
+                       value="{{old('email')}}" required>
                 @error('email')
                 <div>{{ $message }}</div>
                 @enderror
 
                 <label for="message">Mensagem</label>
-                <textarea id="message" name="message" tabindex="3" cols="20" rows="4"
+                <textarea required id="message" name="msg" tabindex="3" cols="20" rows="4"
                           placeholder="Digite aqui...">{{old('message')}}</textarea>
                 @error('message')
                 <div>{{ $message }}</div>
